@@ -12,6 +12,9 @@ body{
 .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   color: #fff !important;
 }
+.css-qiwgdb.MuiSelect-select {
+  color: #fff;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
