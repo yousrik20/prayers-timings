@@ -86,7 +86,7 @@ export default function MainContent(){
             let remainingTime= moment(nextPrayerTime,"hh:mm").diff(momentNow);
             if(remainingTime < 0){
                 const midnightDiff=moment("23:59:59","hh:mm:ss").diff(momentNow);
-                const fjarToMidnightDiff=nextPrayerTimeMoment.diff("00:00:00","hh:mm:ss");
+                const fjarToMidnightDiff=nextPrayerTimeMoment.diff(moment("00:00:00","hh:mm:ss"));
                 
                 const totalDiffernce=midnightDiff + fjarToMidnightDiff;
                remainingTime=totalDiffernce;
@@ -125,11 +125,11 @@ export default function MainContent(){
         
         {/* Prayers Cards */}
         <Stack  direction={{ sm: 'column', md: 'column',lg:'row' }}  spacing={{ sm: '4'}} justifyContent="space-around" style={{marginTop:'50px',display:'flex',justifyItems:'center',alignItems:'center',gap:'40px'}}>
-            <Paryer name="الفجر" time={timings.Fajr} image="../../public/fajr-prayer.png"/>
-            <Paryer name="الظهر" time={timings.Dhuhr} image="../../public/dhhr-prayer-mosque.png"/>
-            <Paryer name="العصر" time={timings.Asr} image="../../public/asr-prayer-mosque.png"/>
-            <Paryer name="المغرب" time={timings.Sunset} image="../../public/sunset-prayer-mosque.png"/>
-            <Paryer name="العشاء" time={timings.Isha} image="../../public/night-prayer-mosque.png"/>            
+            <Paryer name="الفجر" time={timings.Fajr} image="https://wepik.com/api/image/ai/9a07baa7-b49b-4f6b-99fb-2d2b908800c2"/>
+            <Paryer name="الظهر" time={timings.Dhuhr} image="https://wepik.com/api/image/ai/9a07bb45-6a42-4145-b6aa-2470408a2921"/>
+            <Paryer name="العصر" time={timings.Asr} image="https://wepik.com/api/image/ai/9a07bb90-1edc-410f-a29a-d260a7751acf"/>
+            <Paryer name="المغرب" time={timings.Sunset} image="https://wepik.com/api/image/ai/9a07bbe3-4dd1-43b4-942e-1b2597d4e1b5"/>
+            <Paryer name="العشاء" time={timings.Isha} image="https://wepik.com/api/image/ai/9a07bc25-1200-4873-8743-1c370e9eff4d"/>            
         </Stack>
         {/* Select  */}
         <Stack direction="row" justifyContent="center" style={{marginTop:'40px',marginBottom:'20px'}}>
@@ -152,6 +152,7 @@ export default function MainContent(){
                     </Select>
             </FormControl>
         </Stack>
+        
      </>
     )
 }
